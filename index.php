@@ -1,3 +1,5 @@
+<?php //echo ini_get('error_log');die; ?>
+
 <!DOCTYPE html>
 <html>
 	<body>
