@@ -106,7 +106,7 @@ class Numerology {
 					// echo $this->nameology[$value]." ";
 				}
 			}
-			else if($type == 'consonants') {
+			else if($type == 'consonant') {
 				if(!empty($this->nameology[$value]) && !in_array($value, $this->vowels)) {
 					$sum_of_name += $this->nameology[$value];
 					// echo $this->nameology[$value]." ";
@@ -166,7 +166,7 @@ class Numerology {
 			$user_details['digit_sum_year'] = $this->digit_sum_reduce($user_details['year']);
 			$user_details['sum_dob'] = $user_details['digit_sum_day'] + $user_details['digit_sum_month'] + $user_details['digit_sum_year'];
 			$user_details['digit_sum_dob'] = $this->digit_sum_reduce($user_details['sum_dob']);
-			$user_details['sum_ddmm'] = $user_details['digit_sum_day'] + $user_details['digit_sum_month'] + $user_details['digit_sum_year'];
+			$user_details['sum_ddmm'] = $user_details['digit_sum_day'] + $user_details['digit_sum_month'];
 			$user_details['digit_ddmm'] = $this->digit_sum_reduce($user_details['sum_ddmm']);
 			$user_details['age'] = date_diff(date_create($this->user_details[$i]['dob']), date_create('today'))->y;
 
@@ -291,7 +291,7 @@ $numerology->set_user_details($name1, $dob1, $name2, $dob2);
 <html>
 	<body>
 
-		<h1>Numerology</h1>
+		<h1><a href="/php-numerology/compatibility.php">Numerology</a></h1>
 		<p>Please find the details below</p>
 
 		 <table> <!--align="left" border="1" cellpadding="3" cellspacing="0"> -->
